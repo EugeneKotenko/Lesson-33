@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "antd";
 import * as buttonStyles from './button.module.scss'
+import * as containerStyles from './container.module.scss'
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -18,16 +19,16 @@ function App() {
   };
 
   return (
-    <div className="container">
+    <div className={containerStyles.container}>
       <h1>Counter</h1>
-      <div className="counter">
+      <div className={containerStyles.counter}>
         <Button
           className={buttonStyles.decrementBtn}
           onClick={decrement}
         >
           -
         </Button>
-        <p id="counter-value">{counter}</p>
+        <p className={containerStyles.value}>{counter}</p>
         <Button
           className={buttonStyles.incrementBtn}
           onClick={increment}
@@ -35,7 +36,7 @@ function App() {
           +
         </Button>
       </div>
-      <Button id="reset" onClick={reset}>
+      <Button className={buttonStyles.resetBtn} onClick={reset}>
         reset
       </Button>
     </div>
