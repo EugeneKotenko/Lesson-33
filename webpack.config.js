@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-//const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
@@ -18,11 +17,6 @@ module.exports = {
       new MiniCssExtractPlugin({
          filename: '[name][fullhash].css',
       }),
-      /*new CopyPlugin({
-         patterns: [
-              { from: "static", to: "static" }
-         ],
-      }),*/
    ],
    devServer: {
       port: 5550,
